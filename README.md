@@ -18,14 +18,14 @@ Example Charts:
 
 A preview is available for `*.jsc.json` and `*.jsc.json5` extensions that contain chart configurations. 
 
-![JSON5 Preivew](images/json5preview.png
+![JSON5 Preivew](https://raw.githubusercontent.com/jscharting/vscode-jscharting/master/images/json5preview.png
 "Chart Preview")
 
 JSCharting configuration can also be used in md files with `jscharting` codeblock to render charts in preview mode.
 
 # Usage
 
-Run the `JSCharting: Preview Chart` command from `View > Command Palette...` or click the preview icon ![JSON5 Preivew](images/preview_icon.png) in the editor to preview the chart.
+Run the `JSCharting: Preview Chart` command from `View > Command Palette...` or click the preview icon ![JSON5 Preivew](https://raw.githubusercontent.com/jscharting/vscode-jscharting/master/images/preview_icon.png) in the editor to preview the chart.
 
 ## Samples and Source 
 
