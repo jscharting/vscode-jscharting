@@ -1,0 +1,156 @@
+ {
+ type: 'areaStep', 
+  title_label: { 
+    text: 
+      'Total number of cars sold by brand (2009-2018)', 
+    style_fontSize: 16 
+  }, 
+  height:600,
+  legend_visible: false, 
+  palette: [ 
+    '#FDD692', 
+    '#EDB254', 
+    '#EFA69E', 
+    '#EC7357', 
+    '#934E42', 
+    '#4F1E16'
+  ], 
+  yAxis: [ 
+    { 
+      scale_type: 'stacked', 
+      alternateGridFill: 'none', 
+      id: 'mainY'
+    }, 
+    { 
+      id: 'secondY', 
+      orientation: 'opposite', 
+      defaultTick: { 
+        enabled: false, 
+        gridLine_visible: false, 
+        label_style_fontSize: 13 
+      }, 
+      scale_syncWith: 'mainY'
+    } 
+  ], 
+  xAxis: { 
+    formatString: 'd', 
+    crosshair: { 
+      enabled: true, 
+      outline_visible: false, 
+      label_style_fontWeight: 'bold'
+    } 
+  }, 
+  defaultPoint: { 
+    tooltip: 
+      '%icon  <span style="width:55px;align:right;">%seriesName</span> <span style="width:75px;align:right;"><b>%value</b></span>', 
+    marker: { visible: false, type: 'circle' } 
+  }, 
+  defaultSeries_lastPoint: { 
+    marker_visible: true, 
+    yAxisTick: { 
+      axisId: 'secondY', 
+      label: { 
+        text: 
+          '<b>%seriesName</b><br>{(%max - %min):n0}'
+      } 
+    } 
+  }, 
+  series: [ 
+    { 
+      name: 'Jeep', 
+      points: [ 
+        { x: 2009, y: 231701 }, 
+        { x: 2010, y: 522839 }, 
+        { x: 2011, y: 942188 }, 
+        { x: 2012, y: 1416319 }, 
+        { x: 2013, y: 1906773 }, 
+        { x: 2014, y: 2599121 }, 
+        { x: 2015, y: 3464149 }, 
+        { x: 2016, y: 4393595 }, 
+        { x: 2017, y: 5222117 }, 
+        { x: 2018, y: 6195344 }, 
+        { x: 2019, y: 6195344 } 
+      ] 
+    }, 
+    { 
+      name: 'Nissan', 
+      points: [ 
+        { x: 2009, y: 689014 }, 
+        { x: 2010, y: 1494173 }, 
+        { x: 2011, y: 2438246 }, 
+        { x: 2012, y: 3460025 }, 
+        { x: 2013, y: 4591990 }, 
+        { x: 2014, y: 5861555 }, 
+        { x: 2015, y: 7212975 }, 
+        { x: 2016, y: 8639105 }, 
+        { x: 2017, y: 10079154 }, 
+        { x: 2018, y: 11423751 }, 
+        { x: 2019, y: 11423751 } 
+      ] 
+    }, 
+    { 
+      name: 'Honda', 
+      points: [ 
+        { x: 2009, y: 1045061 }, 
+        { x: 2010, y: 2141935 }, 
+        { x: 2011, y: 3165921 }, 
+        { x: 2012, y: 4432490 }, 
+        { x: 2013, y: 5792366 }, 
+        { x: 2014, y: 7165395 }, 
+        { x: 2015, y: 8574781 }, 
+        { x: 2016, y: 10051363 }, 
+        { x: 2017, y: 11538190 }, 
+        { x: 2018, y: 12984084 }, 
+        { x: 2019, y: 12984084 } 
+      ] 
+    }, 
+    { 
+      name: 'Toyota', 
+      points: [ 
+        { x: 2009, y: 1496211 }, 
+        { x: 2010, y: 2984799 }, 
+        { x: 2011, y: 4381636 }, 
+        { x: 2012, y: 6146438 }, 
+        { x: 2013, y: 8040312 }, 
+        { x: 2014, y: 10044685 }, 
+        { x: 2015, y: 12143230 }, 
+        { x: 2016, y: 14249562 }, 
+        { x: 2017, y: 16378739 }, 
+        { x: 2018, y: 18506940 }, 
+        { x: 2019, y: 18506940 } 
+      ] 
+    }, 
+    { 
+      name: 'Chevrolet', 
+      points: [ 
+        { x: 2009, y: 1338612 }, 
+        { x: 2010, y: 2902493 }, 
+        { x: 2011, y: 4678295 }, 
+        { x: 2012, y: 6529941 }, 
+        { x: 2013, y: 8477066 }, 
+        { x: 2014, y: 10510508 }, 
+        { x: 2015, y: 12635855 }, 
+        { x: 2016, y: 14732363 }, 
+        { x: 2017, y: 16798242 }, 
+        { x: 2018, y: 18834265 }, 
+        { x: 2019, y: 18834265 } 
+      ] 
+    }, 
+    { 
+      name: 'Ford', 
+      points: [ 
+        { x: 2009, y: 1440653 }, 
+        { x: 2010, y: 3193164 }, 
+        { x: 2011, y: 5250374 }, 
+        { x: 2012, y: 7411233 }, 
+        { x: 2013, y: 9814775 }, 
+        { x: 2014, y: 12191616 }, 
+        { x: 2015, y: 14693471 }, 
+        { x: 2016, y: 17180958 }, 
+        { x: 2017, y: 19644999 }, 
+        { x: 2018, y: 22026634 }, 
+        { x: 2019, y: 22026634 } 
+      ] 
+    } 
+  ] 
+ }

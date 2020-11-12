@@ -1,0 +1,96 @@
+{
+	"name": "vscode-jscharting",
+	"displayName": "JavaScript Charting Preview for VSCode | JSCharting",
+	"description": "A VSCode extension that adds visualization of JSCharting charts for chart options in JSON and JSON5 files.",
+	"version": "0.0.1",
+	"publisher": "JSCharting",
+	"engines": {
+		"vscode": "^1.46.0"
+	},
+	"categories": [
+		"Charts",
+		"Visualization",
+		"Other"
+	],
+	"icon": "images/icon.png",
+	"galleryBanner": {
+		"color": "#C80000",
+		"theme": "dark"
+	},
+	"bugs": {
+		"url": "https://github.com/jscharting/vscode-jscharting/issues",
+		"email": "support@jscharting.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jscharting/vscode-jscharting.git"
+	},
+	"homepage": "https://github.com/jscharting/vscode-jscharting/blob/master/README.md",
+	"preview": true,
+	"activationEvents": [
+		"onCommand:jscharting.start"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "jscharting.start",
+				"title": "Preview Chart",
+				"category": "JSCharting",
+				"icon": {
+					"light": "./images/preview_light.svg",
+					"dark": "./images/preview_dark.svg"
+				}
+			}
+		],
+		"markdown.previewScripts": [
+			"./node_modules/jscharting/dist/jscharting.js",
+			"./node_modules/json5/dist/index.min.js",
+			"./main.js"
+		],
+		"markdown.markdownItPlugins": true,
+		"menus": {
+			"editor/title": [
+				{
+					"command": "jscharting.start",
+					"when": "resourceFilename =~ /.*\\.(jsc.json5?|md)/",
+					"group": "navigation"
+				}
+			]
+		},
+		"webviews": [
+			{
+				"viewType": "jscharting",
+				"icon": {
+					"light": "./images/preview_light.svg",
+					"dark": "./images/preview_dark.svg"
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.46.0",
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^13.11.0",
+		"eslint": "^6.8.0",
+		"@typescript-eslint/parser": "^2.30.0",
+		"@typescript-eslint/eslint-plugin": "^2.30.0",
+		"glob": "^7.1.6",
+		"mocha": "^7.1.2",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.3.0"
+	},
+	"dependencies": {
+		"jscharting": "^3.0.1",
+		"json5": "^2.1.3"
+	}
+}

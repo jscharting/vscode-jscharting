@@ -1,0 +1,52 @@
+{
+  "type": "cone",
+  "legend_visible": false,
+  "yAxis": {
+    "label_text": "Cost",
+    "formatString": "c"
+  },
+  "chartArea_outline_width": 0,
+  "annotations": [
+    {
+      "position": "inside top",
+      "label": {
+        "text": "Operations Cost",
+        "style_fontSize": 15
+      }
+    }
+  ],
+  "defaultSeries": {
+    "shape_innerPadding": 6,
+    "defaultPoint": {
+      "label_text": "%name <b>%yValuek</b> (%percentOfSeries%)"
+    }
+  },
+  "series": [
+    {
+      "name": "2015 Costs",
+      "palette": "default",
+      "points": [
+        {
+          "name": "R&D",
+          "y": 183
+        },
+        {
+          "name": "Shipping",
+          "y": 140
+        },
+        {
+          "name": "Marketing",
+          "y": 136
+        },
+        {
+          "name": "Manufacturing",
+          "y": 80
+        },
+        {
+          "name": "Retail",
+          "y": 50
+        }
+      ]
+    }
+  ]
+}

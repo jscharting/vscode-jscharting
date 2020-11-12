@@ -1,0 +1,31 @@
+{
+  type: 'map', 
+  legend_visible: false, 
+  chartArea: { 
+    outline_color: '#bbbbbb', 
+    fill: 'white'
+  }, 
+  /* Disable zooming */
+  axisToZoom: '', 
+  mapping: { 
+    projection: false
+    /* 
+     * A world map layer can be specified here to use the map with resolution optimized for showing all world countries. 
+     * It can also be omitted as long as any series specifies it with syntax like 'world.region:africa' 
+     * 
+     * referenceLayers:'world' 
+     * */
+  }, 
+  
+  palette: 'oceanMidtones', 
+  series: [ 
+    { 
+      /* A map propertyFilter that will create a series of country points that where each point is a country in africa */
+      map: 'world.region:africa'
+    }, 
+    { map: 'region:europe' }, 
+    { map: 'region:asia' }, 
+    { map: 'region:americas' } 
+  ] 
+
+}

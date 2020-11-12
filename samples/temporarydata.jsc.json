@@ -1,0 +1,15 @@
+{
+  "type": "column",
+  "yAxis": {
+    "label_text": "Cost",
+    "formatString": "c"
+  },
+  "legend_position":"inside top left",
+  "title_label_text":"Test Chart",
+  "defaultSeries": {
+    "defaultPoint": {
+      "label_text": "%name - %yValue"
+    }
+  }
+
+}
