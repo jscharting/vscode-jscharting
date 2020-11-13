@@ -1,20 +1,18 @@
 {
 	"name": "vscode-jscharting",
-	"displayName": "JavaScript Charting Preview for VSCode | JSCharting",
-	"description": "A VSCode extension that adds visualization of JSCharting charts for chart options in JSON and JSON5 files.",
-	"version": "0.0.1",
-	"publisher": "JSCharting",
+	"displayName": "Chart Preview for VSCode | JSCharting",
+	"description": "A VSCode extension that adds JavaScript chart visualization for JSCharting chart options in JSON and JSON5 files.",
+	"version": "0.0.3",
+	"publisher": "JSCharting-JavaScript-Charts",
 	"engines": {
 		"vscode": "^1.46.0"
 	},
 	"categories": [
-		"Charts",
-		"Visualization",
-		"Other"
+		"Visualization"
 	],
 	"icon": "images/icon.png",
 	"galleryBanner": {
-		"color": "#C80000",
+		"color": "#029CD8",
 		"theme": "dark"
 	},
 	"bugs": {
@@ -26,7 +24,7 @@
 		"url": "https://github.com/jscharting/vscode-jscharting.git"
 	},
 	"homepage": "https://github.com/jscharting/vscode-jscharting/blob/master/README.md",
-	"preview": true,
+	"preview": false,
 	"activationEvents": [
 		"onCommand:jscharting.start"
 	],

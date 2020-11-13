@@ -72,21 +72,25 @@ export function activate(context: vscode.ExtensionContext) {
 
 				const codeText = document.getText();
 
-				let jsonVal;
+				let jsonVal, skipUpdate;
 				try {
 					jsonVal = json5.parse(codeText);
-				} catch {
-					jsonVal = { };
+					jsonVal = fillData(jsonVal);
+
+				} catch (err) {
+					skipUpdate=true;
 				}
 
-				jsonVal = fillData(jsonVal);
-				let jsonString: string = JSON.stringify(jsonVal);
+				if(!skipUpdate){
+					let jsonString: string = JSON.stringify(jsonVal);
 
-				panel.webview.html = getWebviewContent(
-					json5Src,
-					jschartingSrc,
-					jsonString
-				);
+					panel.webview.html = getWebviewContent(
+						json5Src,
+						jschartingSrc,
+						jsonString
+					);
+				}
+
 			};
 
 			draw();
@@ -150,18 +154,19 @@ function getWebviewContent(
 		</html>`;
 }
 
-export function deactivate() { }
+export function deactivate() {
+}
 
-function fillData(cfg:any){
-	if(!cfg.series || cfg.series.length ===0){
+function fillData(cfg: any) {
+	if (!cfg.series || cfg.series.length === 0) {
 		cfg.series = [
 			{
-				name:'Temporary Data',
-				points:[
-					{name:'A',y:20},
-					{name:'B',y:50},
-					{name:'C',y:150},
-					{name:'D',y:75}
+				name: 'Temporary Data',
+				points: [
+					{name: 'A', y: 20},
+					{name: 'B', y: 50},
+					{name: 'C', y: 150},
+					{name: 'D', y: 75}
 				]
 			}
 		];
